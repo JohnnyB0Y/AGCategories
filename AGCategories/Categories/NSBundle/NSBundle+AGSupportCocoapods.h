@@ -1,5 +1,5 @@
 //
-//  NSBundle+SupportCocoapods.h
+//  NSBundle+AGSupportCocoapods.h
 //  
 //
 //  Created by JohnnyB0Y on 2018/12/6.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSBundle (SupportCocoapods)
+@interface NSBundle (AGSupportCocoapods)
 
 /**
  获取 cocoapods 的资源包

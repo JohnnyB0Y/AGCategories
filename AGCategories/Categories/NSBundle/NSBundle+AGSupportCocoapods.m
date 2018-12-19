@@ -1,14 +1,14 @@
 //
-//  NSBundle+SupportCocoapods.m
+//  NSBundle+AGSupportCocoapods.m
 //
 //
 //  Created by JohnnyB0Y on 2018/12/6.
 //  Copyright © 2018 JohnnyB0Y. All rights reserved.
 //
 
-#import "NSBundle+SupportCocoapods.h"
+#import "NSBundle+AGSupportCocoapods.h"
 
-@implementation NSBundle (SupportCocoapods)
+@implementation NSBundle (AGSupportCocoapods)
 
 + (NSBundle *) ag_cocoapodsBundleForClass:(Class)aClass
 {
@@ -41,10 +41,10 @@
                              error:nil];
 }
 
-+ (NSBundle *)ag_bundleForClass:(Class)aClass
-                   withResource:(NSString *)name
-                  withExtension:(NSString *)ext
-                          error:(NSError **)error
++ (NSBundle *) ag_bundleForClass:(Class)aClass
+                    withResource:(NSString *)name
+                   withExtension:(NSString *)ext
+                           error:(NSError **)error
 {
     NSBundle *bundle = [NSBundle bundleForClass:aClass];
     

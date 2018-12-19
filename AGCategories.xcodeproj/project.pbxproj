@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1410D421C9E9F300C06081 /* UIImage+AGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1410CE21C9E9F300C06081 /* UIImage+AGTransform.m */; };
+		3A1410D521C9E9F300C06081 /* UIImage+AGGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1410CF21C9E9F300C06081 /* UIImage+AGGenerate.m */; };
+		3A1410DB21CA5DDE00C06081 /* TestUIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1410DA21CA5DDE00C06081 /* TestUIImageViewController.m */; };
+		3A1410DD21CA60FF00C06081 /* TestUIImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */; };
 		3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00021B8BE0700CFD779 /* AppDelegate.m */; };
 		3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00321B8BE0700CFD779 /* ViewController.m */; };
 		3A4BB00721B8BE0700CFD779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00521B8BE0700CFD779 /* Main.storyboard */; };
 		3A4BB00921B8BE0800CFD779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00821B8BE0800CFD779 /* Assets.xcassets */; };
 		3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00A21B8BE0800CFD779 /* LaunchScreen.storyboard */; };
 		3A4BB00F21B8BE0800CFD779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00E21B8BE0800CFD779 /* main.m */; };
-		3A4BB01921B8BE5900CFD779 /* NSBundle+SupportCocoapods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB01821B8BE5900CFD779 /* NSBundle+SupportCocoapods.m */; };
+		3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1410CC21C9E9F300C06081 /* UIImage+AGGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGGenerate.h"; sourceTree = "<group>"; };
+		3A1410CE21C9E9F300C06081 /* UIImage+AGTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGTransform.m"; sourceTree = "<group>"; };
+		3A1410CF21C9E9F300C06081 /* UIImage+AGGenerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGGenerate.m"; sourceTree = "<group>"; };
+		3A1410D121C9E9F300C06081 /* UIImage+AGTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGTransform.h"; sourceTree = "<group>"; };
+		3A1410D921CA5DDE00C06081 /* TestUIImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIImageViewController.h; sourceTree = "<group>"; };
+		3A1410DA21CA5DDE00C06081 /* TestUIImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIImageViewController.m; sourceTree = "<group>"; };
+		3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestUIImageViewController.xib; sourceTree = "<group>"; };
 		3A4BAFFC21B8BE0700CFD779 /* AGCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4BAFFF21B8BE0700CFD779 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A4BB00021B8BE0700CFD779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,8 +38,8 @@
 		3A4BB00B21B8BE0800CFD779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4BB00D21B8BE0800CFD779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4BB00E21B8BE0800CFD779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3A4BB01721B8BE5900CFD779 /* NSBundle+SupportCocoapods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SupportCocoapods.h"; sourceTree = "<group>"; };
-		3A4BB01821B8BE5900CFD779 /* NSBundle+SupportCocoapods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SupportCocoapods.m"; sourceTree = "<group>"; };
+		3A4BB01721B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AGSupportCocoapods.h"; sourceTree = "<group>"; };
+		3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AGSupportCocoapods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1410CA21C9E93700C06081 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3A1410D121C9E9F300C06081 /* UIImage+AGTransform.h */,
+				3A1410CE21C9E9F300C06081 /* UIImage+AGTransform.m */,
+				3A1410CC21C9E9F300C06081 /* UIImage+AGGenerate.h */,
+				3A1410CF21C9E9F300C06081 /* UIImage+AGGenerate.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		3A1410D721CA5DB100C06081 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				3A1410D821CA5DC500C06081 /* TestUIImage */,
+			);
+			path = Demo;
+			sourceTree = SOURCE_ROOT;
+		};
+		3A1410D821CA5DC500C06081 /* TestUIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3A1410D921CA5DDE00C06081 /* TestUIImageViewController.h */,
+				3A1410DA21CA5DDE00C06081 /* TestUIImageViewController.m */,
+				3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */,
+			);
+			path = TestUIImage;
+			sourceTree = "<group>";
+		};
 		3A4BAFF321B8BE0700CFD779 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +101,7 @@
 		3A4BAFFE21B8BE0700CFD779 /* AGCategories */ = {
 			isa = PBXGroup;
 			children = (
+				3A1410D721CA5DB100C06081 /* Demo */,
 				3A4BB01521B8BE3500CFD779 /* Categories */,
 				3A4BAFFF21B8BE0700CFD779 /* AppDelegate.h */,
 				3A4BB00021B8BE0700CFD779 /* AppDelegate.m */,
@@ -78,6 +119,7 @@
 		3A4BB01521B8BE3500CFD779 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3A1410CA21C9E93700C06081 /* UIImage */,
 				3A4BB01621B8BE4A00CFD779 /* NSBundle */,
 			);
 			path = Categories;
@@ -86,8 +128,8 @@
 		3A4BB01621B8BE4A00CFD779 /* NSBundle */ = {
 			isa = PBXGroup;
 			children = (
-				3A4BB01721B8BE5900CFD779 /* NSBundle+SupportCocoapods.h */,
-				3A4BB01821B8BE5900CFD779 /* NSBundle+SupportCocoapods.m */,
+				3A4BB01721B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.h */,
+				3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */,
 			);
 			path = NSBundle;
 			sourceTree = "<group>";
@@ -151,6 +193,7 @@
 			files = (
 				3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */,
 				3A4BB00921B8BE0800CFD779 /* Assets.xcassets in Resources */,
+				3A1410DD21CA60FF00C06081 /* TestUIImageViewController.xib in Resources */,
 				3A4BB00721B8BE0700CFD779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4BB01921B8BE5900CFD779 /* NSBundle+SupportCocoapods.m in Sources */,
+				3A1410D421C9E9F300C06081 /* UIImage+AGTransform.m in Sources */,
+				3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */,
+				3A1410D521C9E9F300C06081 /* UIImage+AGGenerate.m in Sources */,
+				3A1410DB21CA5DDE00C06081 /* TestUIImageViewController.m in Sources */,
 				3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */,
 				3A4BB00F21B8BE0800CFD779 /* main.m in Sources */,
 				3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */,

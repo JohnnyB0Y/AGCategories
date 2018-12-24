@@ -11,6 +11,9 @@
 		3A1410D521C9E9F300C06081 /* UIImage+AGGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1410CF21C9E9F300C06081 /* UIImage+AGGenerate.m */; };
 		3A1410DB21CA5DDE00C06081 /* TestUIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1410DA21CA5DDE00C06081 /* TestUIImageViewController.m */; };
 		3A1410DD21CA60FF00C06081 /* TestUIImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */; };
+		3A41BCC821D0E38A000674D3 /* NSDate+AGGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41BCC721D0E38A000674D3 /* NSDate+AGGenerate.m */; };
+		3A41BCCD21D0F10B000674D3 /* TestNSDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41BCCB21D0F10B000674D3 /* TestNSDateViewController.m */; };
+		3A41BCCE21D0F10B000674D3 /* TestNSDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BCCC21D0F10B000674D3 /* TestNSDateViewController.xib */; };
 		3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00021B8BE0700CFD779 /* AppDelegate.m */; };
 		3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00321B8BE0700CFD779 /* ViewController.m */; };
 		3A4BB00721B8BE0700CFD779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00521B8BE0700CFD779 /* Main.storyboard */; };
@@ -28,6 +31,11 @@
 		3A1410D921CA5DDE00C06081 /* TestUIImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIImageViewController.h; sourceTree = "<group>"; };
 		3A1410DA21CA5DDE00C06081 /* TestUIImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIImageViewController.m; sourceTree = "<group>"; };
 		3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestUIImageViewController.xib; sourceTree = "<group>"; };
+		3A41BCC621D0E38A000674D3 /* NSDate+AGGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+AGGenerate.h"; sourceTree = "<group>"; };
+		3A41BCC721D0E38A000674D3 /* NSDate+AGGenerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AGGenerate.m"; sourceTree = "<group>"; };
+		3A41BCCA21D0F10B000674D3 /* TestNSDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNSDateViewController.h; sourceTree = "<group>"; };
+		3A41BCCB21D0F10B000674D3 /* TestNSDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNSDateViewController.m; sourceTree = "<group>"; };
+		3A41BCCC21D0F10B000674D3 /* TestNSDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNSDateViewController.xib; sourceTree = "<group>"; };
 		3A4BAFFC21B8BE0700CFD779 /* AGCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4BAFFF21B8BE0700CFD779 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A4BB00021B8BE0700CFD779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		3A1410D721CA5DB100C06081 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3A41BCC921D0F0E4000674D3 /* TestNSDate */,
 				3A1410D821CA5DC500C06081 /* TestUIImage */,
 			);
 			path = Demo;
@@ -80,6 +89,25 @@
 				3A1410DC21CA60FF00C06081 /* TestUIImageViewController.xib */,
 			);
 			path = TestUIImage;
+			sourceTree = "<group>";
+		};
+		3A41BCC521D0E364000674D3 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				3A41BCC621D0E38A000674D3 /* NSDate+AGGenerate.h */,
+				3A41BCC721D0E38A000674D3 /* NSDate+AGGenerate.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		3A41BCC921D0F0E4000674D3 /* TestNSDate */ = {
+			isa = PBXGroup;
+			children = (
+				3A41BCCA21D0F10B000674D3 /* TestNSDateViewController.h */,
+				3A41BCCB21D0F10B000674D3 /* TestNSDateViewController.m */,
+				3A41BCCC21D0F10B000674D3 /* TestNSDateViewController.xib */,
+			);
+			path = TestNSDate;
 			sourceTree = "<group>";
 		};
 		3A4BAFF321B8BE0700CFD779 = {
@@ -119,6 +147,7 @@
 		3A4BB01521B8BE3500CFD779 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3A41BCC521D0E364000674D3 /* NSDate */,
 				3A1410CA21C9E93700C06081 /* UIImage */,
 				3A4BB01621B8BE4A00CFD779 /* NSBundle */,
 			);
@@ -193,6 +222,7 @@
 			files = (
 				3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */,
 				3A4BB00921B8BE0800CFD779 /* Assets.xcassets in Resources */,
+				3A41BCCE21D0F10B000674D3 /* TestNSDateViewController.xib in Resources */,
 				3A1410DD21CA60FF00C06081 /* TestUIImageViewController.xib in Resources */,
 				3A4BB00721B8BE0700CFD779 /* Main.storyboard in Resources */,
 			);
@@ -209,6 +239,8 @@
 				3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */,
 				3A1410D521C9E9F300C06081 /* UIImage+AGGenerate.m in Sources */,
 				3A1410DB21CA5DDE00C06081 /* TestUIImageViewController.m in Sources */,
+				3A41BCC821D0E38A000674D3 /* NSDate+AGGenerate.m in Sources */,
+				3A41BCCD21D0F10B000674D3 /* TestNSDateViewController.m in Sources */,
 				3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */,
 				3A4BB00F21B8BE0800CFD779 /* main.m in Sources */,
 				3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */,
@@ -354,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3MK3532499;
 				INFOPLIST_FILE = AGCategories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3MK3532499;
 				INFOPLIST_FILE = AGCategories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

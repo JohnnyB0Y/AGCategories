@@ -21,6 +21,7 @@
 		3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00A21B8BE0800CFD779 /* LaunchScreen.storyboard */; };
 		3A4BB00F21B8BE0800CFD779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00E21B8BE0800CFD779 /* main.m */; };
 		3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */; };
+		3AFD681021D1A2DD007317E6 /* UIColor+AGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD680E21D1A2DD007317E6 /* UIColor+AGExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		3A4BB00E21B8BE0800CFD779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A4BB01721B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AGSupportCocoapods.h"; sourceTree = "<group>"; };
 		3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AGSupportCocoapods.m"; sourceTree = "<group>"; };
+		3AFD680E21D1A2DD007317E6 /* UIColor+AGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AGExtensions.m"; sourceTree = "<group>"; };
+		3AFD680F21D1A2DD007317E6 /* UIColor+AGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AGExtensions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,7 @@
 		3A4BB01521B8BE3500CFD779 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3AFD680D21D1A1C1007317E6 /* UIColor */,
 				3A41BCC521D0E364000674D3 /* NSDate */,
 				3A1410CA21C9E93700C06081 /* UIImage */,
 				3A4BB01621B8BE4A00CFD779 /* NSBundle */,
@@ -161,6 +165,15 @@
 				3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */,
 			);
 			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		3AFD680D21D1A1C1007317E6 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD680F21D1A2DD007317E6 /* UIColor+AGExtensions.h */,
+				3AFD680E21D1A2DD007317E6 /* UIColor+AGExtensions.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +257,7 @@
 				3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */,
 				3A4BB00F21B8BE0800CFD779 /* main.m in Sources */,
 				3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */,
+				3AFD681021D1A2DD007317E6 /* UIColor+AGExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

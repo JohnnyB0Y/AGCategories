@@ -3,7 +3,7 @@
 //
 //
 //  Created by JohnnyB0Y on 15/10/3.
-//  Copyright © 2015年 JohnnyB0Y司. All rights reserved.
+//  Copyright © 2015年 JohnnyB0Y. All rights reserved.
 //
 
 #import "NSDate+AGGenerate.h"

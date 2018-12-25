@@ -7,7 +7,7 @@
 //
 
 #import "UIColor+AGExtensions.h"
-#import "../UIImage/UIImage+AGGenerate.h"
+#import "UIImage+AGGenerate.h"
 
 @implementation UIColor (AGExtensions)
 

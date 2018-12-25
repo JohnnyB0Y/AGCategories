@@ -86,26 +86,26 @@ typedef NS_ENUM(NSUInteger, AGDateFormatMode) {
 /**
  时间格式字符串转化成NSDate对象
 
- @param format 时间格式化字符串（2015-10-10 00:00:00）
- @param formatMode 格式化模式枚举（与format对应）
+ @param fStr 时间格式化字符串（2015-10-10 00:00:00）
+ @param mode 格式化模式枚举（与format对应）
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return NSDate对象
  */
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name;
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode;
 
 /**
  时间格式字符串转化成NSDate对象
  
- @param format 时间格式化字符串（2015-10-10 00:00:00）
- @param formatMode 格式化模式字符串（与format对应，@"yyyy-MM-dd HH:mm:ss"）
+ @param fStr 时间格式化字符串（2015-10-10 00:00:00）
+ @param mode 格式化模式字符串（与format对应，@"yyyy-MM-dd HH:mm:ss"）
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return NSDate对象
  */
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode timeZoneName:(NSString *)name;
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode timeZoneName:(NSString *)name;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode;
 
 
 #pragma mark - NSDate ==> NSString
@@ -113,24 +113,24 @@ typedef NS_ENUM(NSUInteger, AGDateFormatMode) {
 /**
  NSDate对象转化成时间格式字符串
 
- @param formatMode 格式化模式枚举
+ @param mode 格式化模式枚举
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return 时间格式字符串
  */
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name;
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode;
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode timeZoneName:(NSString *)name;
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode timeZone:(nullable NSTimeZone *)timeZone;
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode;
 
 /**
  NSDate对象转化成时间格式字符串
  
- @param formatMode 格式化模式字符串（@"yyyy-MM-dd HH:mm:ss"）
+ @param mode 格式化模式字符串（@"yyyy-MM-dd HH:mm:ss"）
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return 时间格式字符串
  */
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode timeZoneName:(NSString *)name;
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode;
+- (NSString *) ag_stringWithModeString:(NSString *)mode timeZoneName:(NSString *)name;
+- (NSString *) ag_stringWithModeString:(NSString *)mode timeZone:(nullable NSTimeZone *)timeZone;
+- (NSString *) ag_stringWithModeString:(NSString *)mode;
 
 #pragma mark - NSString、NSNumber、NSTimeInterval ==>（ NSDate ）==> NSString
 
@@ -138,43 +138,43 @@ typedef NS_ENUM(NSUInteger, AGDateFormatMode) {
  毫秒对象转化成时间格式字符串
 
  @param ms 毫秒对象（NSString、NSNumber）
- @param formatMode 格式化模式枚举
+ @param mode 格式化模式枚举
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return 时间格式字符串
  */
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode;
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode;
 
 /**
  毫秒对象转化成时间格式字符串
  
  @param ms 毫秒对象（NSString、NSNumber）
- @param formatMode 格式化模式字符串（@"yyyy-MM-dd HH:mm:ss"）
+ @param mode 格式化模式字符串（@"yyyy-MM-dd HH:mm:ss"）
  @param name 时区的名字（@"America/Los_Angeles": 美国洛杉矶; @"Pacific/Auckland": 新西兰奥克兰;）
  @return 时间格式字符串
  */
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode;
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode;
 
 // ............ 秒转化成时间格式字符串
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode;
 
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode;
 
 // ............ 秒对象转化成时间格式字符串
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode;
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode;
 
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode timeZoneName:(NSString *)name;
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode timeZone:(nullable NSTimeZone *)timeZone;
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode;
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode timeZoneName:(NSString *)name;
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode timeZone:(nullable NSTimeZone *)timeZone;
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode;
 
 @end
 

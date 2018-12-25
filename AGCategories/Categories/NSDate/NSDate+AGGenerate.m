@@ -150,45 +150,45 @@
     return [self ag_dateWithSecondTi:(NSTimeInterval)[s longLongValue]];
 }
 
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name
 {
-    return [self ag_dateWithFormatString:format modeString:[self ag_modeStringWithMode:formatMode] timeZoneName:name];
+    return [self ag_dateWithFormatString:fStr modeString:[self ag_modeStringWithMode:mode] timeZoneName:name];
 }
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode timeZone:(NSTimeZone *)timeZone
 {
-    return [self ag_dateWithFormatString:format modeString:[self ag_modeStringWithMode:formatMode] timeZone:timeZone];
+    return [self ag_dateWithFormatString:fStr modeString:[self ag_modeStringWithMode:mode] timeZone:timeZone];
 }
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format mode:(AGDateFormatMode)formatMode
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr mode:(AGDateFormatMode)mode
 {
-    return [self ag_dateWithFormatString:format modeString:[self ag_modeStringWithMode:formatMode]];
+    return [self ag_dateWithFormatString:fStr modeString:[self ag_modeStringWithMode:mode]];
 }
 
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode timeZoneName:(NSString *)name
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode timeZoneName:(NSString *)name
 {
     NSTimeZone *tz;
     if ( name ) {
         tz = [[NSTimeZone alloc] initWithName:name];
     }
-    return [self ag_dateWithFormatString:format modeString:formatMode timeZone:tz];
+    return [self ag_dateWithFormatString:fStr modeString:mode timeZone:tz];
 }
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     if ( timeZone ) {
         [formatter setTimeZone:timeZone];
     }
-    [formatter setDateFormat:formatMode];
-    return [formatter dateFromString:format];
+    [formatter setDateFormat:mode];
+    return [formatter dateFromString:fStr];
 }
-+ (NSDate *) ag_dateWithFormatString:(NSString *)format modeString:(NSString *)formatMode
++ (NSDate *) ag_dateWithFormatString:(NSString *)fStr modeString:(NSString *)mode
 {
-    return [self ag_dateWithFormatString:format modeString:formatMode timeZone:nil];
+    return [self ag_dateWithFormatString:fStr modeString:mode timeZone:nil];
 }
 
 
-+ (NSString *) ag_modeStringWithMode:(AGDateFormatMode)formatMode
++ (NSString *) ag_modeStringWithMode:(AGDateFormatMode)mode
 {
-    switch (formatMode) {
+    switch (mode) {
         case AGDateFormatModeOnlyDate: {
             return @"yyyy-MM-dd";
         } break;
@@ -204,136 +204,136 @@
 }
 
 #pragma mark - NSDate => NSString
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode timeZoneName:(NSString *)name
 {
-    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:formatMode] timeZoneName:name];
+    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:mode] timeZoneName:name];
 }
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode timeZone:(NSTimeZone *)timeZone
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode timeZone:(NSTimeZone *)timeZone
 {
-    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:formatMode] timeZone:timeZone];
+    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:mode] timeZone:timeZone];
 }
-- (NSString *) ag_stringWithMode:(AGDateFormatMode)formatMode
+- (NSString *) ag_stringWithMode:(AGDateFormatMode)mode
 {
-    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:formatMode]];
+    return [self ag_stringWithModeString:[NSDate ag_modeStringWithMode:mode]];
 }
 
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode timeZoneName:(NSString *)name
+- (NSString *) ag_stringWithModeString:(NSString *)mode timeZoneName:(NSString *)name
 {
     NSTimeZone *tz;
     if ( name ) {
         tz = [[NSTimeZone alloc] initWithName:name];
     }
-    return [self ag_stringWithModeString:formatMode timeZone:tz];
+    return [self ag_stringWithModeString:mode timeZone:tz];
 }
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode timeZone:(NSTimeZone *)timeZone
+- (NSString *) ag_stringWithModeString:(NSString *)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     if ( timeZone ) {
         [formatter setTimeZone:timeZone];
     }
-    [formatter setDateFormat:formatMode];
+    [formatter setDateFormat:mode];
     return [formatter stringFromDate:self];
 }
-- (NSString *) ag_stringWithModeString:(NSString *)formatMode
+- (NSString *) ag_stringWithModeString:(NSString *)mode
 {
-    return [self ag_stringWithModeString:formatMode timeZone:nil];
+    return [self ag_stringWithModeString:mode timeZone:nil];
 }
 
 // ............
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithMode:formatMode timeZoneName:name];
+    return [date ag_stringWithMode:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithMode:formatMode timeZone:timeZone];
+    return [date ag_stringWithMode:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)formatMode
++ (NSString *) ag_stringWithMillisecond:(id)ms mode:(AGDateFormatMode)mode
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithMode:formatMode];
+    return [date ag_stringWithMode:mode];
 }
 
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithModeString:formatMode timeZoneName:name];
+    return [date ag_stringWithModeString:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithModeString:formatMode timeZone:timeZone];
+    return [date ag_stringWithModeString:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)formatMode
++ (NSString *) ag_stringWithMillisecond:(id)ms modeString:(NSString *)mode
 {
     NSDate *date = [self ag_dateWithMillisecond:ms];
-    return [date ag_stringWithModeString:formatMode];
+    return [date ag_stringWithModeString:mode];
 }
 
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithMode:formatMode timeZoneName:name];
+    return [date ag_stringWithMode:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithMode:formatMode timeZone:timeZone];
+    return [date ag_stringWithMode:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)formatMode
++ (NSString *) ag_stringWithSecond:(id)s mode:(AGDateFormatMode)mode
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithMode:formatMode];
+    return [date ag_stringWithMode:mode];
 }
 
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithModeString:formatMode timeZoneName:name];
+    return [date ag_stringWithModeString:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithModeString:formatMode timeZone:timeZone];
+    return [date ag_stringWithModeString:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)formatMode
++ (NSString *) ag_stringWithSecond:(id)s modeString:(NSString *)mode
 {
     NSDate *date = [self ag_dateWithSecond:s];
-    return [date ag_stringWithModeString:formatMode];
+    return [date ag_stringWithModeString:mode];
 }
 
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithMode:formatMode timeZoneName:name];
+    return [date ag_stringWithMode:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithMode:formatMode timeZone:timeZone];
+    return [date ag_stringWithMode:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)formatMode
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti mode:(AGDateFormatMode)mode
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithMode:formatMode];
+    return [date ag_stringWithMode:mode];
 }
 
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode timeZoneName:(NSString *)name
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode timeZoneName:(NSString *)name
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithModeString:formatMode timeZoneName:name];
+    return [date ag_stringWithModeString:mode timeZoneName:name];
 }
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode timeZone:(NSTimeZone *)timeZone
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode timeZone:(NSTimeZone *)timeZone
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithModeString:formatMode timeZone:timeZone];
+    return [date ag_stringWithModeString:mode timeZone:timeZone];
 }
-+ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)formatMode
++ (NSString *) ag_stringWithSecondTi:(NSTimeInterval)ti modeString:(NSString *)mode
 {
     NSDate *date = [self ag_dateWithSecondTi:ti];
-    return [date ag_stringWithModeString:formatMode];
+    return [date ag_stringWithModeString:mode];
 }
 
 @end

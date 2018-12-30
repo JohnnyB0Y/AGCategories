@@ -21,6 +21,9 @@
 		3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4BB00A21B8BE0800CFD779 /* LaunchScreen.storyboard */; };
 		3A4BB00F21B8BE0800CFD779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB00E21B8BE0800CFD779 /* main.m */; };
 		3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */; };
+		3A9A173A21D615AC00C4502F /* NSString+AGJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A173821D615AC00C4502F /* NSString+AGJudge.m */; };
+		3A9A173F21D61C9300C4502F /* TestNSStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A173D21D61C9300C4502F /* TestNSStringViewController.m */; };
+		3A9A174021D61C9300C4502F /* TestNSStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A173E21D61C9300C4502F /* TestNSStringViewController.xib */; };
 		3AFD681021D1A2DD007317E6 /* UIColor+AGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD680E21D1A2DD007317E6 /* UIColor+AGExtensions.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,11 @@
 		3A4BB00E21B8BE0800CFD779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A4BB01721B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AGSupportCocoapods.h"; sourceTree = "<group>"; };
 		3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AGSupportCocoapods.m"; sourceTree = "<group>"; };
+		3A9A173821D615AC00C4502F /* NSString+AGJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AGJudge.m"; sourceTree = "<group>"; };
+		3A9A173921D615AC00C4502F /* NSString+AGJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AGJudge.h"; sourceTree = "<group>"; };
+		3A9A173C21D61C9300C4502F /* TestNSStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNSStringViewController.h; sourceTree = "<group>"; };
+		3A9A173D21D61C9300C4502F /* TestNSStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNSStringViewController.m; sourceTree = "<group>"; };
+		3A9A173E21D61C9300C4502F /* TestNSStringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNSStringViewController.xib; sourceTree = "<group>"; };
 		3AFD680E21D1A2DD007317E6 /* UIColor+AGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AGExtensions.m"; sourceTree = "<group>"; };
 		3AFD680F21D1A2DD007317E6 /* UIColor+AGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AGExtensions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 		3A1410D721CA5DB100C06081 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3A9A173B21D61C7200C4502F /* TestNSString */,
 				3A41BCC921D0F0E4000674D3 /* TestNSDate */,
 				3A1410D821CA5DC500C06081 /* TestUIImage */,
 			);
@@ -150,6 +159,7 @@
 		3A4BB01521B8BE3500CFD779 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3A9A173721D6143500C4502F /* NSString */,
 				3AFD680D21D1A1C1007317E6 /* UIColor */,
 				3A41BCC521D0E364000674D3 /* NSDate */,
 				3A1410CA21C9E93700C06081 /* UIImage */,
@@ -165,6 +175,25 @@
 				3A4BB01821B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m */,
 			);
 			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		3A9A173721D6143500C4502F /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A173921D615AC00C4502F /* NSString+AGJudge.h */,
+				3A9A173821D615AC00C4502F /* NSString+AGJudge.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		3A9A173B21D61C7200C4502F /* TestNSString */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A173C21D61C9300C4502F /* TestNSStringViewController.h */,
+				3A9A173D21D61C9300C4502F /* TestNSStringViewController.m */,
+				3A9A173E21D61C9300C4502F /* TestNSStringViewController.xib */,
+			);
+			path = TestNSString;
 			sourceTree = "<group>";
 		};
 		3AFD680D21D1A1C1007317E6 /* UIColor */ = {
@@ -235,6 +264,7 @@
 			files = (
 				3A4BB00C21B8BE0800CFD779 /* LaunchScreen.storyboard in Resources */,
 				3A4BB00921B8BE0800CFD779 /* Assets.xcassets in Resources */,
+				3A9A174021D61C9300C4502F /* TestNSStringViewController.xib in Resources */,
 				3A41BCCE21D0F10B000674D3 /* TestNSDateViewController.xib in Resources */,
 				3A1410DD21CA60FF00C06081 /* TestUIImageViewController.xib in Resources */,
 				3A4BB00721B8BE0700CFD779 /* Main.storyboard in Resources */,
@@ -250,12 +280,14 @@
 			files = (
 				3A1410D421C9E9F300C06081 /* UIImage+AGTransform.m in Sources */,
 				3A4BB01921B8BE5900CFD779 /* NSBundle+AGSupportCocoapods.m in Sources */,
+				3A9A173F21D61C9300C4502F /* TestNSStringViewController.m in Sources */,
 				3A1410D521C9E9F300C06081 /* UIImage+AGGenerate.m in Sources */,
 				3A1410DB21CA5DDE00C06081 /* TestUIImageViewController.m in Sources */,
 				3A41BCC821D0E38A000674D3 /* NSDate+AGGenerate.m in Sources */,
 				3A41BCCD21D0F10B000674D3 /* TestNSDateViewController.m in Sources */,
 				3A4BB00421B8BE0700CFD779 /* ViewController.m in Sources */,
 				3A4BB00F21B8BE0800CFD779 /* main.m in Sources */,
+				3A9A173A21D615AC00C4502F /* NSString+AGJudge.m in Sources */,
 				3A4BB00121B8BE0700CFD779 /* AppDelegate.m in Sources */,
 				3AFD681021D1A2DD007317E6 /* UIColor+AGExtensions.m in Sources */,
 			);

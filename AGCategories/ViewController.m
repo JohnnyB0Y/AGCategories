@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "../Demo/TestUIImage/TestUIImageViewController.h"
 #import "../Demo/TestNSDate/TestNSDateViewController.h"
+#import "../Demo/TestNSString/TestNSStringViewController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"点击测试";
     
-    _items = @[@"UIImage", @"NSDate", @"NSBundle"];
+    _items = @[@"UIImage", @"NSDate", @"NSBundle", @"NSString"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -61,6 +62,9 @@
     }
     else if ( indexPath.row == 1 ) {
         vc = [TestNSDateViewController testNSDateViewController];
+    }
+    else if ( indexPath.row == 3 ) {
+        vc = [TestNSStringViewController testNSStringViewController];
     }
     
     if ( vc ) {

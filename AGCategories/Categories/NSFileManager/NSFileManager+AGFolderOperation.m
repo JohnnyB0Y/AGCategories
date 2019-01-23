@@ -29,6 +29,7 @@
         // 忽略某些扩展名的文件
         for ( NSString *igonreExtension in extensions ) {
             isIgnore = [subPath hasSuffix:igonreExtension];
+            if ( isIgnore ) break; // 找到-跳出
         }
         if ( isIgnore ) continue; // 略过
         
@@ -78,6 +79,7 @@
         // 统计指定扩展名的文件
         for ( NSString *containExtension in extensions ) {
             isIgnore = ! [subPath hasSuffix:containExtension];
+            if ( NO == isIgnore ) break; // 找到-跳出
         }
         if ( isIgnore ) continue; // 略过
         

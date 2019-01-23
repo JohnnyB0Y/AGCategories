@@ -7,7 +7,7 @@
 platform :ios, '8.0'
 target 'AGCategoriesDemo' do
 
-pod 'AGCategories', '~> 0.1.7'
+pod 'AGCategories', '~> 0.1.8'
 
 end
 ```

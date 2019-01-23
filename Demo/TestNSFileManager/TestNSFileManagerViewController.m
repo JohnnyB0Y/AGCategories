@@ -43,11 +43,11 @@
     NSLog(@"Library all file, bitSize: %ld - byteSize: %ld - kiloByte: %f - megaByte: %f - gigaByte: %f", bitSize, byteSize, kiloByte, megaByte, gigaByte);
     
     // ignore .ktx file
-    byteSize = [fileManager ag_sizeOfByteWithFolderPath:dirPathOfLibrary ignore:@[@"ktx"] error:nil];
+    byteSize = [fileManager ag_sizeOfByteWithFolderPath:dirPathOfLibrary ignore:@[@"ktx", @"mp4"] error:nil];
     NSLog(@"Ignore .ktx file, byteSize: %ld", byteSize);
     
     // contain .ktx file
-    byteSize = [fileManager ag_sizeOfByteWithFolderPath:dirPathOfLibrary contain:@[@"ktx"] error:nil];
+    byteSize = [fileManager ag_sizeOfByteWithFolderPath:dirPathOfLibrary contain:@[@"ktx", @"mp4"] error:nil];
     NSLog(@"Contain .ktx file, byteSize: %ld", byteSize);
 }
 

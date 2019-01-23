@@ -7,7 +7,7 @@
 //
 
 #import "TestNSStringViewController.h"
-#import "../../AGCategories/Categories/NSString/NSString+AGJudge.h"
+#import "AGCategories.h"
 
 @interface TestNSStringViewController ()
 

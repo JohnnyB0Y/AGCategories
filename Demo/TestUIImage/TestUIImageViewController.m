@@ -7,8 +7,7 @@
 //
 
 #import "TestUIImageViewController.h"
-#import "../../AGCategories/Categories/UIImage/UIImage+AGTransform.h"
-#import "../../AGCategories/Categories/UIImage/UIImage+AGGenerate.h"
+#import "AGCategories.h"
 
 @interface TestUIImageViewController ()
 

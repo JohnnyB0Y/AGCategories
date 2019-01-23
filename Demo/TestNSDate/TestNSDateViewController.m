@@ -7,7 +7,7 @@
 //
 
 #import "TestNSDateViewController.h"
-#import "../../AGCategories/Categories/NSDate/NSDate+AGGenerate.h"
+#import "AGCategories.h"
 
 @interface TestNSDateViewController ()
 

@@ -10,6 +10,7 @@
 #import "../Demo/TestUIImage/TestUIImageViewController.h"
 #import "../Demo/TestNSDate/TestNSDateViewController.h"
 #import "../Demo/TestNSString/TestNSStringViewController.h"
+#import "../Demo/TestNSFileManager/TestNSFileManagerViewController.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"点击测试";
     
-    _items = @[@"UIImage", @"NSDate", @"NSBundle", @"NSString"];
+    _items = @[@"UIImage", @"NSDate", @"NSBundle", @"NSString", @"NSFileManager"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -65,6 +66,9 @@
     }
     else if ( indexPath.row == 3 ) {
         vc = [TestNSStringViewController testNSStringViewController];
+    }
+    else if ( indexPath.row == 4 ) {
+        vc = [[TestNSFileManagerViewController alloc] init];
     }
     
     if ( vc ) {
